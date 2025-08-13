@@ -2,18 +2,23 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>로컬 AI 요약기</title>
+    <title>로컬 Llama3 LangGraph 예제</title>
 </head>
 <body>
-<h1>로컬 Llama3 요약기</h1>
+<h1>로컬 AI (요약 + 키워드 추출)</h1>
 <form method="post">
-    <textarea name="text" rows="5" cols="60" placeholder="요약할 텍스트 입력"></textarea><br>
-    <button type="submit">요약하기</button>
+    <textarea name="text" rows="5" cols="60" placeholder="분석할 텍스트 입력"></textarea><br>
+    <button type="submit">실행</button>
 </form>
 
 {% if summary %}
 <h2>요약 결과</h2>
 <p>{{ summary }}</p>
+{% endif %}
+
+{% if keywords %}
+<h2>키워드</h2>
+<p>{{ keywords }}</p>
 {% endif %}
 </body>
 </html>
