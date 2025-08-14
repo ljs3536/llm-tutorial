@@ -20,5 +20,10 @@
 <h2>키워드</h2>
 <p>{{ keywords }}</p>
 {% endif %}
+
+{% if sentiment is not none %}
+<h2>감정분석</h2>
+<p>{{ sentiment }}</p>
+{% endif %}
 </body>
 </html>
